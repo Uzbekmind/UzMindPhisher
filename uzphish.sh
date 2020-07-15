@@ -25,7 +25,7 @@ printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Snapchat\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Twitter\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Github\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Google\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bolimni tanlang: \e[0m\en' bolim
+read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bolimni tanlang: \e[0m\en' option
 
 
 if [[ $option == 1 ]]; then
