@@ -25,7 +25,7 @@ printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Snapchat\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Twitter\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Github\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Google\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bo'limni tanlang: \e[0m\en' bo'lim
+read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bolimni tanlang: \e[0m\en' bolim
 
 
 if [[ $option == 1 ]]; then
@@ -80,7 +80,7 @@ printf "\n"
 printf "\e[1;93m       .:.:.\e[0m\e[1;77m  Yaratuvchi: UzbekMind \e[0m\e[1;93m.:.:.\e[0m\n"
 printf "\n"
 printf "  \e[101m\e[1;77m:: Diqqat: Dasturchilar hacker emas, ularni qo'llamaydilar ham    ::\e[0m\n"
-printf "  \e[101m\e[1;77m:: va UzPhish tomonidan yetkazilgan zarar uchun javobgar emaslar! ::\e[0m\n"
+printf "  \e[101m\e[1;77m::  UzPhish tomonidan yetkazilgan zarar uchun javobgar emaslar! ::\e[0m\n"
 printf "\n"
 }
 
