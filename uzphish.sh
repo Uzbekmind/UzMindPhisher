@@ -10,10 +10,10 @@ trap 'printf "\n";stop;exit 1' 2
 
 dependencies() {
 
-command -v php > /dev/null 2>&1 || { echo >&2 "Sizda php o'rnatilmagan. Iltimos o'rnating. Inkor."; exit 1; }
-command -v wget > /dev/null 2>&1 || { echo >&2 "Sizda wget o'rnatilmagan. iltimos o'rnating. Inkor."; exit 1; }
-command -v unzip > /dev/null 2>&1 || { echo >&2 "Sizda unzip o'rnatilmagan. Iltimos o'rnating. Inkor."; exit 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "Sizda curl o'rnatilmagan. Iltimos o'rnating. Inkor."; exit 1; }
+command -v php > /dev/null 2>&1 || { echo >&2 "[!]Sizda php o'rnatilmagan. Iltimos (apt install php) buyrug'i orqali o'rnating!"; exit 1; }
+command -v wget > /dev/null 2>&1 || { echo >&2 "[!]Sizda wget o'rnatilmagan. iltimos (apt install wget) burug'i orqali o'rnating!."; exit 1; }
+command -v unzip > /dev/null 2>&1 || { echo >&2 "[!]Sizda unzip o'rnatilmagan. Iltimos (apt install unzip) buyrug'i orqali o'rnating!."; exit 1; }
+command -v curl > /dev/null 2>&1 || { echo >&2 "[!]Sizda curl o'rnatilmagan. Iltimos (pip install curl) buyrug'i orqali o'rnating!"; exit 1; }
 
 }
 
