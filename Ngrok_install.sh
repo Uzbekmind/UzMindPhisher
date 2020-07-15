@@ -1,7 +1,7 @@
 #!/bin/dash
-# Desenvolvido por Tchelo Noob
+# UzbekMind
 atualizar='\033[1;32m'
-echo "$atualizar Atualizando repositório..."
+echo "$ Repozitoriya yangilanmoqda..."
 apt update && upgrade -y
 apt install -y wget
 clear
@@ -15,12 +15,12 @@ echo "${k}   ██║   ╚██████╗██║  ██║███�
 echo "${k}   ╚═╝    ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ";
 echo "${k} /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/";
 echo
-echo "Вы хотите установить Ngrok | Do you want to install Ngrok? [Y/n]"
+echo "Nnrokni o`rnatishni istaysizmi? | Do you want to install Ngrok? [Y/n]"
 read opcao
 case $opcao in
 y)
 echo
-echo "Downloading Termux-ngrok..."
+echo "Ngrok yuklanmoqda..."
 case `dpkg --print-architecture` in
 aarch64)
     architectureURL="arm64" ;;
@@ -35,7 +35,7 @@ i*86)
 x86_64)
     architectureURL="amd64" ;;
 *)
-    echo "Arquitetura desconhecida"
+    echo "Noma`lum arxitektura"
 esac
 
 wget "https://github.com/tchelospy/NgrokTest/blob/master/ngrok-stable-linux-${architectureURL}.zip?raw=true" -O ngrok.zip
@@ -51,12 +51,12 @@ echo "${k}██║╚██╗██║██║   ██║██╔══█�
 echo "${k}██║ ╚████║╚██████╔╝██║  ██║╚██████╔╝██║  ██╗";
 echo "${k}╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝";
 echo
-echo "Exemplo de comando (ngrok http 80\nOu ngrok para ajuda)"
+echo "Misol uchun buyruq (ngrok http 80\ yordam uchun!)"
 ;;
 
 n)
 clear
-echo "Ngrok não instalado :("
+echo "Ngrok o`rnatilmadi! :("
 echo
 esac
 
