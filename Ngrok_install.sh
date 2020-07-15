@@ -15,7 +15,7 @@ echo "${k}   ██║   ╚██████╗██║  ██║███�
 echo "${k}   ╚═╝    ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ";
 echo "${k} /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/";
 echo
-echo "Nnrokni o`rnatishni istaysizmi? | Do you want to install Ngrok? [Y/n]"
+echo "Ngrokni ornatishni istaysizmi? | Do you want to install Ngrok? [Y/n]"
 read opcao
 case $opcao in
 y)
@@ -35,7 +35,7 @@ i*86)
 x86_64)
     architectureURL="amd64" ;;
 *)
-    echo "Noma`lum arxitektura"
+    echo "Nomalum arxitektura"
 esac
 
 wget "https://github.com/tchelospy/NgrokTest/blob/master/ngrok-stable-linux-${architectureURL}.zip?raw=true" -O ngrok.zip
@@ -56,7 +56,7 @@ echo "Misol uchun buyruq (ngrok http 80\ yordam uchun!)"
 
 n)
 clear
-echo "Ngrok o`rnatilmadi! :("
+echo "Ngrok ornatilmadi! :("
 echo
 esac
 
