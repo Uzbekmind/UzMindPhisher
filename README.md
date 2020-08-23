@@ -3,7 +3,9 @@
 #### https://github.com/Uzbekmind
 ## Instagram:
 #### not found
-### Bu koddan foydalanishdan oldi meni ogohlantiring! 
+
+### Bu dasturning kodidan foydalanishdan oldin meni ogohlantiring!
+
 ### Barcha fishing saytlar:SocialFish Tool (https://github.com/UndeadSec/SocialFish) repositoriyasidan olingan!
 ### Instagram fishing sayti: An0nUD4Y (https://github.com/An0nUD4Y) repositoriyasidan olingan!
 
